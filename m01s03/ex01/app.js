@@ -3,7 +3,10 @@ var object = {
   surname: 'Gheorghiu',
   age: 38,
   petOwner: false,
+  carOwner: true,
 };
+
+var year = new Date();
 
 console.warn(`
 Folosind codul din index.html, introdu
@@ -33,3 +36,22 @@ scazand varsta pe care ai trecut-o in obiect
 din anul curent (un proces numit hardcodare)
 `);
 console.log((2022 - object.age).toString());
+
+console.warn(`
+Afiseaza fraza “xxx yyy are xx ani.”
+in consola folosind operatorul de concatenare
+`);
+console.log(
+  object.name + ' ' + object.surname + ' are ' + object.age + ' ani.',
+);
+
+console.warn(`
+Afiseaza fraza “xxx s-a nascut in aaaa.”
+Foloseste tot anul curent pentru a scadea varsta.
+`);
+console.log(
+  object.name +
+    ' s-a nascut in ' +
+    (year.getFullYear() - object.age).toString() +
+    '.',
+);
