@@ -38,6 +38,5 @@ if (userInput.includes('a' || 'A')) {
     },
   )} "a".`;
 } else {
-  message03.innerText = `Numele introdus, ${userInput}, 'nu contine'
-  } litera "a".`;
+  message03.innerText = `Numele introdus, ${userInput}, nu contine litera "a".`;
 }
