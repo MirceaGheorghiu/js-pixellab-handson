@@ -17,11 +17,11 @@ function accessor(methodSuffix) {
 const currentYear = new Date().getFullYear();
 
 console.warn(`
-Folosind accesorul salveaza numele mic al persoanei
+Folosind accesorul salveaza numele complet al persoanei
 intr-o variabila si foloseste-l in propozitia: “Eu sunt xxx.”
 `);
 const firstName = accessor('Name');
-console.log(firstName);
+console.log(`Eu sunt ${firstName}.`);
 
 console.warn(`
 Afiseaza anul de nastere al persoanei folosind anul curent.
@@ -36,3 +36,24 @@ console.log(
     'Age',
   )} ani si m-am nascut in anul ${currentYear - accessor('Age')}.`,
 );
+
+console.warn(`
+Folosind accesorul afiseaza numele persoanei.
+`);
+console.log(accessor('Name'));
+
+console.warn(`
+Afiseaza varsta persoanei.
+`);
+console.log(accessor('Age'));
+
+console.warn(`
+Afiseaza anul de nastere al persoanei folosind anul curent.
+Intr-o propozitie de forma “M-am nascut in ${currentYear - accessor('Age')}.”
+`);
+console.log(`M-am nascut in ${currentYear - accessor('Age')}.`);
+
+console.warn(`
+Afiseaza propozitia “Ma numesc xxx yyy si am aa ani!”
+`);
+console.log(`Ma numesc ${accessor('Name')} si am ${accessor('Age')} ani!`);
