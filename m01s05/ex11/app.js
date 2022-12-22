@@ -5,45 +5,45 @@ Daca primeste doi, a unui dreptunghi.
 Daca primeste trei, sa calculeze suprafata totala a paralelipipedului.
 Foloseste structura switch.
 `);
+// function calculateSurface(width, length, height) {
+//   if (arguments.length === 1) {
+//     return Math.pow(width, 2);
+//   } else if (arguments.length === 2) {
+//     return width * length;
+//   } else if (arguments.length === 3) {
+//     return 2 * (width * length + length * height + width * height);
+//   }
+// }
+
+// console.log(calculateSurface(6, 7));
+// console.log(calculateSurface(2));
+// console.log(calculateSurface(20, 15, 5));
+
+// am pus si varianta cu switch mai jos, care returneaza in consola valorile corecte pt surface,
+// dar am lasat sa ruleze varianta cu if, altfel nu valideaza Pixeltab-ul (probabil din cauza parametrilor)
+
 function calculateSurface(width, length, height) {
-  if (arguments.length === 1) {
-    return Math.pow(width, 2);
-  } else if (arguments.length === 2) {
-    return width * length;
-  } else if (arguments.length === 3) {
-    return 2 * (width * length + length * height + width * height);
+  let surface;
+  switch (arguments.length) {
+    case 1:
+      surface = Math.pow(width, 2);
+      break;
+    case 2:
+      surface = width * length;
+      break;
+    case 3:
+      surface = 2 * (width * length + length * height + width * height);
+      break;
+    default:
+      surface = 0;
+      break;
   }
+  return surface;
 }
 
 console.log(calculateSurface(6, 7));
 console.log(calculateSurface(2));
 console.log(calculateSurface(20, 15, 5));
-
-// am pus si varianta cu switch mai jos, care returneaza in consola valorile corecte pt surface,
-// dar am lasat sa ruleze varianta cu if, altfel nu valideaza Pixeltab-ul (probabil din cauza parametrilor)
-
-// function calculateSurface(shape, width, length, height) {
-//   let surface;
-//   switch (shape) {
-//     case 'square':
-//       surface = Math.pow(width, 2);
-//       break;
-//     case 'rectangle':
-//       surface = width * length;
-//       break;
-//     case 'parallelipiped':
-//       surface = 2 * (width * length + length * height + width * height);
-//       break;
-//     default:
-//       surface = 0;
-//       break;
-//   }
-//   return surface;
-// }
-
-// console.log(calculateSurface('rectangle', 6, 7));
-// console.log(calculateSurface('square', 2));
-// console.log(calculateSurface('parallelipiped', 20, 15, 5));
 
 console.warn(`
 Creeaza o functie numita calculateCircleArea()
