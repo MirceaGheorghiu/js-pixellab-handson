@@ -27,17 +27,18 @@ img {
 }
 
 .time {
-  font-size: 72px;
+  /* am corectat sa fie si responsive :) */
+  font-size: 4vw;
   margin-top: 120px;
   margin-bottom: 60px;
 }
 
 .day {
   color: aqua;
-  font-size: 36px;
+  font-size: 2vw;
   margin-bottom: 10px;
 }
 
 .date {
-  font-size: 24px;
+  font-size: 1.5vw;
 }

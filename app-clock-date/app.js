@@ -5,9 +5,10 @@ const dayElement = document.querySelector('.day');
 function setTime() {
   const currentTime = new Date();
 
-  const hours = currentTime.getHours();
-  const minutes = currentTime.getMinutes();
-  const seconds = currentTime.getSeconds();
+  // am pus initial gresit const si am avut impresia ca merge, dar evident trebuia let :)
+  let hours = currentTime.getHours();
+  let minutes = currentTime.getMinutes();
+  let seconds = currentTime.getSeconds();
 
   if (hours < 10) {
     hours = '0' + hours;
@@ -19,7 +20,7 @@ function setTime() {
     seconds = '0' + seconds;
   }
 
-  timeElement.innerHTML = `${hours} : ${minutes} <span class="seconds" style="display: block; font-size: 24px">${seconds}</span>`;
+  timeElement.innerHTML = `${hours} : ${minutes} <span class="seconds" style="display: block; font-size: 1.5vw">${seconds}</span>`;
 }
 
 function setDate() {
