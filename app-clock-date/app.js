@@ -20,7 +20,7 @@ function setTime() {
     seconds = '0' + seconds;
   }
 
-  timeElement.innerHTML = `${hours} : ${minutes} <span class="seconds" style="display: block; font-size: 1.5vw">${seconds}</span>`;
+  timeElement.innerHTML = `${hours} : ${minutes} <span class="seconds">${seconds}</span>`;
 }
 
 function setDate() {
