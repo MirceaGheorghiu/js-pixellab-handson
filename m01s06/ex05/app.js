@@ -1,4 +1,6 @@
 (function () {
+  // no hoist here for function showAlert()
+
   document.addEventListener('DOMContentLoaded', function () {
     const showButton = document.querySelector('#showButton');
     const toggleEventButton = document.querySelector('#toggleEventButton');
@@ -45,18 +47,18 @@
       alert('Butonul a fost apasat');
     }
 
-    function showMessage(message) {
-      let paragraphElement = document.querySelector('.message');
+    function showMessage(message = '') {
+      const cssClass = 'message';
+      let paragraphElement = document.querySelector(`.${cssClass}`);
 
       if (paragraphElement === null) {
         paragraphElement = document.createElement('p');
-        paragraphElement.classList.add('message');
+        paragraphElement.classList.add(cssClass);
+
+        document.body.append(paragraphElement);
       }
 
       paragraphElement.innerText = message;
-      paragraphElement.classList.add('message');
-
-      document.body.append(paragraphElement);
     }
   });
 })();
