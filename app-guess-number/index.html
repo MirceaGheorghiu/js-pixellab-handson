@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Number Guessing Game</title>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="style.css"
+  >
+</head>
+
+<body>
+  <div class="container">
+    <img
+      class="bg-image"
+      src="./images/bg-image.jpg"
+      alt="Background image"
+    >
+
+    <div class="wrapper">
+      <form class="guess-form">
+        <label for="guess-input">Enter a number between 1 and 100:</label>
+        <input
+          type="number"
+          class="guess-input"
+        >
+        <button
+          type="submit"
+          title="Check your number"
+          value="Submit"
+          class="submit-button"
+        >Check your number</button>
+      </form>
+
+      <p class="result"></p>
+    </div>
+
+    <button
+      type="button"
+      title="Reset the game"
+      value="Reset"
+      class="reset-button"
+    >Reset The Game</button>
+
+    <div class="name">Number Guessing Game</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
