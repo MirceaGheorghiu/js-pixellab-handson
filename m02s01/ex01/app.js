@@ -103,3 +103,21 @@ const opel = new Car('Opel', 'red', 4, 3);
  */
 
 const cars = [audi, opel];
+
+cars.forEach((car) => {
+  console.log(
+    `Masina era marca ${car.make} si se deplasa cu ${car.speed} km/h.`,
+  );
+
+  console.log(`Viteza noua este ${car.speed - 5} km/h.`);
+
+  // ar mai fi si varianta de mai jos cu for,
+  // in consola e ok, dar nu se inverzeste Pixeltab-ul,
+  // pentru ca se actualizeaza cerintele cu noua viteza.
+
+  // for (let i = 0; i < 5; i++) {
+  //   car.decelerate();
+  // }
+
+  // console.log(`Viteza noua este ${car.speed} km/h.`);
+});
