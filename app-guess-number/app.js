@@ -29,6 +29,8 @@ guessForm.addEventListener('submit', (event) => {
   if (guess === '') {
     result.textContent = 'Please, enter a valid number!';
   }
+
+  guessInput.value = '';
 });
 
 resetButton.addEventListener('click', () => {

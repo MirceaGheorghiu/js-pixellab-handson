@@ -74,7 +74,7 @@ body {
   font-family: 'Press Start 2P', serif;
   font-family: 'Inconsolata', monospace;
   position: absolute;
-  bottom: 100px;
+  bottom: 12vh;
   text-shadow: #fc0 0 5px 5px;
   color: #ff2e69;
   font-weight: 700;
@@ -89,7 +89,7 @@ body {
 .name {
   color: wheat;
   position: absolute;
-  bottom: 30px;
+  bottom: 3vh;
   text-shadow: #fc0 0 5px 5px;
   font-size: 16px;
 }
