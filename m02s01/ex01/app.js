@@ -115,9 +115,17 @@ cars.forEach((car) => {
   // in consola e ok, dar nu se inverzeste Pixeltab-ul,
   // pentru ca se actualizeaza cerintele cu noua viteza.
 
+  // v1
   // for (let i = 0; i < 5; i++) {
   //   car.decelerate();
   // }
+
+  // v2
+  // car.decelerate();
+  // car.decelerate();
+  // car.decelerate();
+  // car.decelerate();
+  // car.decelerate();
 
   // console.log(`Viteza noua este ${car.speed} km/h.`);
 });
