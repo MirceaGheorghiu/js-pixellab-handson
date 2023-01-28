@@ -53,3 +53,26 @@ bike.decelerate();
 bike.decelerate();
 bike.decelerate();
 bike.setSpeed(-10);
+
+class Tricycle extends Vehicle {
+  constructor(make, color, speed, topSpeed) {
+    super(make, color, 3, speed, topSpeed, 0);
+  }
+}
+
+const trike = new Tricycle('Tryke', 'red', 2, 9, -2);
+trike.speed = 0;
+
+for (let i = 0; i < 3; i++) {
+  trike.decelerate();
+  console.log(`Viteza tricicletei este: ${trike.speed}.`);
+
+  //Viteza tricicletei nu scade sub 0.
+}
+
+trike.speed = -10;
+trike.displaySpeed(`Viteza tricicletei este: ${trike.speed}.`);
+
+console.log(`Viteza tricicletei setata manual este: ${trike.speed}`);
+// Viteza tricicletei, setata manual (fara decelerate() )
+// ia valoarea atribuita, chiar daca este sub topReverseSpeed
