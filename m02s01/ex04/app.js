@@ -55,7 +55,7 @@ class Car {
     this.wheelBack.append(this.wheelCapBack);
 
     // wheel front
-    this.wheelFront = this.wheelBack = this.createElement('div', [
+    this.wheelFront = this.createElement('div', [
       'wheel',
       'car__wheel',
       'car__wheel--front',
@@ -93,7 +93,6 @@ class Car {
     this.frame.style.left = `${left}px`;
     this.frame.style.top = `${top}px`;
 
-    this.frame.style.transition = 'left top 3s ease-in-out';
     // nu inteleg de ce, cand apelez changePosition() cu valori noi pt left si top,
     // nu apare niciun efect de ease-in-out si miscarea se produce instant. Sigur uit ceva :)
 
@@ -178,4 +177,7 @@ car2.changeCapColor('blue');
 
 // car2.changeTireColor('magenta');
 
+car2.toggleHazards();
+car2.toggleHazards();
+car2.toggleHazards();
 car2.toggleHazards();
