@@ -170,8 +170,10 @@ class Car {
       this.intervalId = setInterval(() => {
         if (this.areLightsOn === true) {
           this.turnLightsOff();
+          this.disengageBreak();
         } else {
           this.turnLightsOn();
+          this.engageBreak();
         }
       }, 800);
       this.areHazardsOn = true;
@@ -199,6 +201,7 @@ car.toggleHazards();
 car.toggleHazards();
 car.toggleHazards();
 car.toggleHazards();
+car.toggleHazards();
 
 const car2 = new Car(50, 45, 'blue', 'red').render();
 car2.changeTopColor('black');
@@ -207,6 +210,8 @@ car2.changeCapColor('blue');
 
 // car2.changeTireColor('magenta');
 
+car2.toggleHazards();
+car2.toggleHazards();
 car2.toggleHazards();
 car2.toggleHazards();
 car2.toggleHazards();
