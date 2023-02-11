@@ -25,4 +25,10 @@ log('Imaginea se incarca...');
 image.onload = () => {
   // add event handler
   log('Imaginea s-a incarcat');
+
+  image.addEventListener('click', () => {
+    const urlText = image.getAttribute('src');
+
+    alert(`Imaginea cu URL-ul: ${urlText} s-a incarcat.`);
+  });
 };

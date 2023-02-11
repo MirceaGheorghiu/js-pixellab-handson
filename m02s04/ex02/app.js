@@ -16,8 +16,12 @@ controls.addEventListener('click', (event) => {
 
   // currentTarget este elementul pe care
   // am atasta eventul
-  const colorInput = event.currentTarget.querySelector('.color');
-  colorInput.value = '';
+  //suprascriem box, cu labelul curent selectat
+  //fiind variabila locala, nu interfera cu box din afara
+
+  const checkedInput = document.querySelector('.box-container input:checked');
+
+  const box = checkedInput.parentElement;
 
   box.style.backgroundColor = color;
 });
