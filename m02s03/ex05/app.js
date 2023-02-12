@@ -15,13 +15,13 @@ const logMessage = (message = '') => {
   container.prepend(p);
 };
 
-let initialWindowWidth = window.innerWidth;
-let initiaWindowlHeight = window.innerHeight;
+let windowWidth = window.innerWidth;
+let windowlHeight = window.innerHeight;
 
-logMessage(initialWindowWidth);
+logMessage(windowWidth);
 
-let calculateWindowSurface = (w, h) => {
-  const message = `${w * h} pixeli.`;
+let calculateWindowSurface = () => {
+  const message = `${windowWidth * windowlHeight} pixeli.`;
 
   return message;
 };
@@ -31,27 +31,21 @@ window.addEventListener('resize', () => {
   let newHeight = window.innerHeight;
   let message = '';
 
-  if (newWidth !== initialWindowWidth) {
+  if (newWidth !== windowWidth) {
     message = `Fereastra si-a schimbat latimea, avand acum ${newWidth} pixeli latime si ${newHeight} inaltime.`;
-    initialWindowWidth = newWidth;
+    windowWidth = newWidth;
   }
 
-  if (newHeight !== initiaWindowlHeight) {
+  if (newHeight !== windowlHeight) {
     message = `Fereastra si-a schimbat inaltimea, avand acum ${newHeight} pixeli inaltime si ${newWidth} latime.`;
-    initiaWindowlHeight = newHeight;
+    windowHeight = newHeight;
   }
 
-  container.innerText = `Fereastra are acum suprafata de ${calculateWindowSurface(
-    newWidth,
-    newHeight,
-  )}`;
+  container.innerText = `Fereastra are acum suprafata de ${calculateWindowSurface()}`;
 
   logMessage(message);
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  container.innerText = `Fereastra initala are suprafata de ${calculateWindowSurface(
-    initialWindowWidth,
-    initiaWindowlHeight,
-  )}`;
+  container.innerText = `Fereastra initala are suprafata de ${calculateWindowSurface()}`;
 });
