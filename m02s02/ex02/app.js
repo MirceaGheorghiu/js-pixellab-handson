@@ -169,6 +169,20 @@ $('#has-friends').on('click', function () {
   }
 });
 
+const $skillInputField = $('#skill').on('keydown', function (event) {
+  const $skillInput = $(this);
+  const skillValue = $skillInput.val();
+
+  if (skillValue.trim().length < 3 || event.code !== 'Enter') {
+    return;
+  }
+
+  const $skillsUl = renderSkillsUl(skillValue);
+  const $addSkillButton = $skillInput.next();
+
+  $addSkillButton.after($skillsUl);
+});
+
 const $skillButton = $('#skill')
   .next()
   .on('click', function () {
@@ -184,24 +198,7 @@ const $skillButton = $('#skill')
 
     const $skillsUl = renderSkillsUl(skillValue);
     $addSkillButton.after($skillsUl);
-  })
-  .on('keydown', function () {
-    const $addSkillButton = $(this);
-    const $skillInput = $addSkillButton.prev();
-    const skillValue = $skillInput.val();
-
-    $skillInput.val('').focus();
-
-    if (skillValue.trim().length < 3) {
-      return;
-    }
-
-    const $skillsUl = renderSkillsUl(skillValue);
-    $addSkillButton.after($skillsUl);
   });
-
-// ceva nu e ok aici, pt ca nu vrea sa preia skill-ul din input la enter
-// totusi am incercat sa schimb direct, in codul initial, click cu keydown si tot nu a vrut... sigur omit eu ceva :)
 
 // function functions are hoisted
 
