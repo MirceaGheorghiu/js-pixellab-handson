@@ -22,13 +22,9 @@ const axisMap = {
 
 const keysMap = {
   ArrowUp: axisMap.N,
-  ArrowUpRight: axisMap.NE,
   ArrowRight: axisMap.E,
-  ArrowDownRight: axisMap.SE,
   ArrowDown: axisMap.S,
-  ArrowDownLeft: axisMap.SW,
   ArrowLeft: axisMap.W,
-  ArrowUpLeft: axisMap.NW,
 };
 
 controls.addEventListener('click', (event) => {
