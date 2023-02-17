@@ -11,16 +11,24 @@ const heroData = {
 
 const axisMap = {
   N: { y: -1 },
+  NE: { x: 1, y: -1 },
   E: { x: 1 },
+  SE: { x: 1, y: 1 },
   S: { y: 1 },
+  SW: { x: -1, y: 1 },
   W: { x: -1 },
+  NW: { x: -1, y: -1 },
 };
 
 const keysMap = {
   ArrowUp: axisMap.N,
+  ArrowUpRight: axisMap.NE,
   ArrowRight: axisMap.E,
+  ArrowDownRight: axisMap.SE,
   ArrowDown: axisMap.S,
+  ArrowDownLeft: axisMap.SW,
   ArrowLeft: axisMap.W,
+  ArrowUpLeft: axisMap.NW,
 };
 
 controls.addEventListener('click', (event) => {
